@@ -9,16 +9,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class FirstServlet extends HttpServlet{
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request,HttpServletResponse response)
+	protected void doPost(HttpServletRequest request,HttpServletResponse response)
 	throws 	ServletException, IOException{
 		PrintWriter out=response.getWriter();
 		response.setContentType("text/html");
-		out.println("HELLO WORLD!!!");
+		//out.println("HELLO");
+		request.setAttribute("username", request.getParameter("username"));
+		request.setAttribute("password", request.getParameter("password"));
+	    request.getRequestDispatcher("/Afisare.jsp").forward(request, response);
+		//out.println(request.getParameter("username")+" "+request.getParameter("password"));
+		 
 		out.close();
 		
 	}

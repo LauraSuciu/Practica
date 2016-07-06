@@ -20,5 +20,15 @@
         <servlet-name>FirstServlet</servlet-name>
         <url-pattern>/firstServlet</url-pattern>
     </servlet-mapping>
+    
+        <servlet>
+        <servlet-name>Form</servlet-name>
+        <servlet-class>com.exemple.servlets.Form</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Form</servlet-name>
+        <url-pattern>/form</url-pattern>
+    </servlet-mapping>
 
 </web-app>
