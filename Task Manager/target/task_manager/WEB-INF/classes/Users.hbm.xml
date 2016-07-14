@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="task_manager.Users" table="users">
+      <meta attribute="class-description">
+         This class contains the users detail. 
+      </meta>
+      <id name="id_user" type="int" column="id_user">
+         <generator class="native"/>
+      </id>
+      <property name="username" column="username" type="string"/>
+      <property name="password" column="password" type="string"/>
+      <property name="mail" column="mail" type="string"/>
+      <property name="id_role" column="id_role" type="int"/>
+   </class>
+</hibernate-mapping>
